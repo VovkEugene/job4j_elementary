@@ -1,21 +1,23 @@
 package ru.job4j.converter;
 
-import java.text.DecimalFormat;
-
 public class Converter {
     public static float rubleToEuro(float value) {
-        return value / 116.14F;
+        return value / 115.00F;
     }
 
     public static float rubleToDollar(float value) {
-        return value / 109.57F;
+        return value / 110.00F;
     }
 
     public static void main(String[] args) {
-        float euro = Converter.rubleToEuro(140);
-        float dollar = Converter.rubleToDollar(140);
-        DecimalFormat decimal = new DecimalFormat("0.00");
-        System.out.println("140 рублей это " + decimal.format(euro) + " евро.");
-        System.out.printf("140 рублей это %.2f долларов.", dollar);
+        float input = 230.0F;
+        float expected = 2.0F;
+        float actual = rubleToEuro(input);
+        boolean passed = (expected == actual);
+        System.out.printf("%.2f рублей равно 2 евро. Результат теста: %b.\n", input, passed);
+        input = 220F;
+        actual = rubleToDollar(input);
+        passed = (expected == actual);
+        System.out.printf("%.2f рублей равно 2 доллара. Результат теста: %b.\n", input, passed);
     }
 }
