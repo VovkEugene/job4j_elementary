@@ -52,7 +52,7 @@ class PointTest {
     }
 
     @Test
-    void whenMinus10to03then3() {
+    void whenMinus10to03then4Dot47() {
         int x1 = -2;
         int y1 = 0;
         int x2 = 0;
