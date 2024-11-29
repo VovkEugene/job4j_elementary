@@ -2,7 +2,7 @@ package ru.job4j.converter;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ConverterTest {
     private static final float DELTA = 0.0001F;
